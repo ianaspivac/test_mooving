@@ -1,0 +1,18 @@
+.card-featured {
+  text-align: left;
+}
+.card-featured__price {
+  font-size: 24px;
+  color: #27263d;
+  font-weight: 700;
+  margin:24px 0 14px 0;
+}
+.card-featured__location{
+    color: rgba(39, 38, 61, 0.5);
+}
+.card-featured__location,.card-featured__details{
+    font-size: 12px;
+}
+.card-featured__details span{
+    margin:0 16px 0 8px;
+}

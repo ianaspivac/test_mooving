@@ -1,0 +1,14 @@
+.actions-property__details {
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: flex-start;
+  width: 490px;
+}
+
+.actions-property__details p {
+  margin: 32px 0 40px 0;
+  font-size: 20px;
+  text-align: left;
+  color: rgba(39, 38, 61, 0.5);
+}

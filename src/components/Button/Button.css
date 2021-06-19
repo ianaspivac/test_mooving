@@ -1,0 +1,17 @@
+.button a{
+    font-family: Inter;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 16px;
+  text-transform: uppercase;
+  font-weight: 600;
+  height: 56px;
+  padding: 16px 32px;
+  border: 2px solid rgba(39, 38, 61, 0.5);
+  box-sizing: border-box;
+  border-radius: 99px;
+  background-color: transparent;
+  color: rgba(39, 38, 61, 0.5);
+}

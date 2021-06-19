@@ -1,0 +1,16 @@
+.featured-properties{
+    max-width: 1320px;
+    width:100%;
+    margin:auto;
+    padding:0 120px;
+}
+.featured-properties__heading{
+    display:flex;
+    justify-content: space-between;
+    margin-bottom:56px;
+}
+.featured-list{
+    display: flex;
+    justify-content: space-between;
+    padding:0;
+}

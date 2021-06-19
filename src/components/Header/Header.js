@@ -1,25 +1,32 @@
-import './Header.css';
-import logo from './Logo.svg'
+import "./Header.css";
+import logo from "./Logo.svg";
+import  {BrowserRouter as Router,Link} from 'react-router-dom'
 function Header() {
   return (
     <div className="header">
-        <div className="header__container">
-     <div className="header__logo">
-         <img src={logo} alt="logo"/>
-     </div>
-     <div className="header__links">
-         <ul>
-             <li>Market data</li>
-             <li>Latest property news</li>
-             <li>Pricing</li>
-             <li>FAQ</li>
-         </ul>
-     </div>
-     <div className="header__actions">
-         <button className="header__authorization">Sign in</button>
-         <button className="header__sell">Sell</button>
-     </div>
-     </div>
+      <div className="header__container">
+        <div className="header__logo">
+            <Link to="/">
+          <img src={logo} alt="logo" />
+          </Link>
+        </div>
+        <nav className="header__links">
+          <ul>
+            <li> <Link to="/">Market data</Link></li>
+            <li> <Link to="/">Latest property news</Link></li>
+            <li> <Link to="/">Pricing</Link></li>
+            <li> <Link to="/">FAQ</Link></li>
+          </ul>
+        </nav>
+        <div className="header__actions">
+          <Link to="/" className="header__authorization">
+            Sign in
+          </Link>
+          <Link to="/" className="header__sell">
+            Sell
+          </Link>
+        </div>
+      </div>
     </div>
   );
 }

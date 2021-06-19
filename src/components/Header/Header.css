@@ -1,24 +1,23 @@
-.header__container {   
-  width: 1440px;
+.header__container {
+  max-width: 1320px;
+  width: 100%;
+  margin: auto;
+  padding: 0 120px;
   height: 88px;
-  margin-left: auto;
-  margin-right: auto;
 }
-.header{
-    background: #f7f8fa;
+.header {
+  background: #f7f8fa;
 }
 .header__container,
-.header__actions button {
+.header__actions a {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  font-family: Inter;
   text-transform: uppercase;
   font-weight: 600;
 }
-.header__links{
-    margin:0 212px 0 80px;
-
+.header__links {
+  margin: 0 215px 0 100px;
 }
 .header__links ul {
   list-style: none;
@@ -27,26 +26,28 @@
 .header__links ul li {
   line-height: 24px;
   color: rgba(39, 38, 61, 0.5);
-  margin: 0 40px;
+  margin: 0 20px;
   text-align: center;
 }
 .header__actions {
-  display: flex;
+  display: flex; 
 }
-.header__actions button {
-  flex-direction: row;
-  width: 128px;
-  height: 56px;
+.header__actions a {
+  font-family: Inter;
+  justify-content: center;
+  align-items: center;
   padding: 16px 32px;
-  margin: 0 8px;
+  width: 65px;
   box-shadow: 0px 4px 8px 0px #0000000d;
   border: none;
   border-radius: 99px;
 }
+
 .header__authorization {
   background-color: white;
 }
 .header__sell {
+  margin-left: 8px;
   background-color: #4466ee;
   color: white;
 }
