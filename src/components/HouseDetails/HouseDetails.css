@@ -1,0 +1,9 @@
+.house-details__location{
+    color: rgba(39, 38, 61, 0.5);
+}
+.house-details__location,.house-details__details{
+    font-size: 12px;
+}
+.house-details span{
+    margin:0 16px 0 8px;
+}

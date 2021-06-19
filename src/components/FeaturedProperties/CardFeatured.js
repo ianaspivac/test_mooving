@@ -1,24 +1,22 @@
 import "./CardFeatured.css";
-import bed from "./icons/bed.svg";
-import bath from "./icons/bath.svg";
+
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import HouseDetails from "../HouseDetails/HouseDetails";
 
 function CardFeatured(props) {
   return (
     <div className="card-featured">
       <div className="card-featured__image">
-          <img src={props.image} />
+        <img src={props.image} />
       </div>
       <div className="card-featured__info">
         <p className="card-featured__price">£{props.price}</p>
-        <div className="card-featured__details">
-          <img src={bed} />
-          <span>{props.nrBed} Bed</span>
-          <img src={bath} />
-          <span>{props.nrBath} Baths</span>
-          <span>{props.size} sq. ft.</span>
-        </div>
-        <div className="card-featured__location"><p>{props.location}</p></div>
+        <HouseDetails
+          nrBed={props.nrBed}
+          nrBath={props.nrBath}
+          size={props.size}
+          location={props.location}
+        />
       </div>
     </div>
   );

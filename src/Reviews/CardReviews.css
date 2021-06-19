@@ -1,0 +1,37 @@
+.card-reviews {
+  display: flex;
+  flex-direction: column;
+  background: #f7f8fa;  
+  max-width: 530px;
+  max-height: 424px;
+  padding: 48px;
+  border-radius: 12px;
+  margin:0 16px;
+}
+.card-reviews__rating {
+  display: flex;
+}
+.card-reviews__rating img {
+  margin: 0 2px;
+}
+.card-reviews__rating div{
+margin-right:10px;
+}
+.card-reviews__feedback {
+  margin: 32px 0 40px 0;
+  padding: 16px 0 32px 0;
+  font-size: 20px;
+  line-height: 32px;
+  color: rgba(39, 38, 61, 0.5);
+}
+.card-reviews {
+  text-align: left;
+}
+.card-reviews__buyer-info p {
+   
+  font-size: 16px;
+  font-weight: 600;
+}
+.card-reviews__rating {
+  font-size: 20px;
+}

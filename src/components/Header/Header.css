@@ -4,6 +4,7 @@
   margin: auto;
   padding: 0 120px;
   height: 88px;
+  flex-wrap: wrap;
 }
 .header {
   background: #f7f8fa;

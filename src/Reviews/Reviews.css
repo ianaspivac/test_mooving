@@ -1,0 +1,14 @@
+.reviews{
+    max-width: 1320px;
+    width:100%;
+    padding:120px; 
+    text-align:left; 
+    margin:auto;
+}
+.reviews-heading{
+    margin-bottom: 56px;
+}
+.reviews-list{
+    display:flex;
+    justify-content: space-between;
+}

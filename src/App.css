@@ -1,6 +1,10 @@
 .App {
   text-align: center;
+  color: #27263D;
   font-family: Inter;
+}
+ul{
+  padding:0;
 }
 a, a:focus, a:active {
   text-decoration: none;
