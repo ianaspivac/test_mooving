@@ -1,14 +1,17 @@
 .App {
   text-align: center;
-  color: #27263D;
+  color: #27263d;
   font-family: Inter;
 }
-ul{
-  padding:0;
+ul {
+  padding: 0;
 }
-a, a:focus, a:active {
+ul li {
+  list-style: none;
+}
+a,
+a:focus,
+a:active {
   text-decoration: none;
   color: inherit;
 }
-
-

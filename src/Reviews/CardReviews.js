@@ -28,6 +28,7 @@ function CardReviews(props) {
           nrBath={props.nrBath}
           size={props.size}
           location={props.location}
+          key={props.key}
         />
       </div>
     </article>

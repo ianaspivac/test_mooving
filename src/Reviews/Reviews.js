@@ -5,6 +5,7 @@ import CardReviews from "./CardReviews";
 function Reviews() {
   const reviews = [
     {
+      key: Math.floor(Math.random() * 100 + 1),
       rating: "4.0",
       feedback:
         "Moovikng.uk defies all the stereotypes. Platform is reliable, prompt, helpful, thoughtful and professional. A pleasure to work with and I would highly recommend her. A pleasure to work with and I would highly recommend her. ",
@@ -15,15 +16,16 @@ function Reviews() {
       location: "50 E 72nd St, New York, NY 10021",
     },
     {
-        rating: "5.0",
-        feedback:
-          "Moovikng.uk defies all the stereotypes. Platform is reliable, prompt, helpful, thoughtful and professional. A pleasure to work with and I would highly recommend her. A pleasure to work with and I would highly recommend her. ",
-        buyerInfo: "Buyer Closed Feb '21  –  $1.28M",
-        nrBed: 1,
-        nrBath: 2,
-        size: "8,380",
-        location: "50 E 72nd St, New York, NY 10021",
-      },
+      key: Math.floor(Math.random() * 100 + 1),
+      rating: "5.0",
+      feedback:
+        "Moovikng.uk defies all the stereotypes. Platform is reliable, prompt, helpful, thoughtful and professional. A pleasure to work with and I would highly recommend her. A pleasure to work with and I would highly recommend her. ",
+      buyerInfo: "Buyer Closed Feb '21  –  $1.28M",
+      nrBed: 1,
+      nrBath: 2,
+      size: "8,380",
+      location: "50 E 72nd St, New York, NY 10021",
+    },
   ];
   return (
     <div className="reviews">
@@ -40,6 +42,7 @@ function Reviews() {
             nrBath={review.nrBath}
             size={review.size}
             location={review.location}
+            key={review.key}
           />
         ))}
       </ul>

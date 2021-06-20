@@ -9,6 +9,7 @@ import house3 from "./houses/house3.jpg";
 function FeaturedProperties() {
   const featured = [
     {
+      key: Math.floor(Math.random() * 100 + 1),
       image: house1,
       price: "49,900",
       nrBed: 1,
@@ -17,6 +18,7 @@ function FeaturedProperties() {
       location: "50 E 72nd St, New York, NY 10021",
     },
     {
+      key: Math.floor(Math.random() * 100 + 1),
       image: house2,
       price: "521,500",
       nrBed: 1,
@@ -25,6 +27,7 @@ function FeaturedProperties() {
       location: "50 E 72nd St, New York, NY 10021",
     },
     {
+      key: Math.floor(Math.random() * 100 + 1),
       image: house3,
       price: "234,900",
       nrBed: 1,
@@ -48,6 +51,7 @@ function FeaturedProperties() {
             nrBath={house.nrBath}
             size={house.size}
             location={house.location}
+            key={house.key}
           />
         ))}
       </ul>
