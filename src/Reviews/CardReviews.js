@@ -2,6 +2,8 @@ import "./CardReviews.css";
 import HouseDetails from "../components/HouseDetails/HouseDetails";
 import filledStar from "./icons/filled-star.svg";
 import emptyStar from "./icons/empty-star.svg";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 function CardReviews(props) {
   const starsRating = [];
@@ -13,7 +15,7 @@ function CardReviews(props) {
   }
 
   return (
-    <article className="card-reviews">
+    <div className="card-reviews">
       <div className="card-reviews__rating">
         <div>{props.rating}</div>
         {starsRating.map((star) => (
@@ -31,7 +33,7 @@ function CardReviews(props) {
           key={props.key}
         />
       </div>
-    </article>
+    </div>
   );
 }
 

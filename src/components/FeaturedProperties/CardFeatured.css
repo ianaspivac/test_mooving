@@ -1,11 +1,30 @@
 .card-featured {
   text-align: left;
-  margin:0 20px;
+  margin: 0 20px;
 }
 .card-featured__price {
   font-size: 24px;
   color: #27263d;
   font-weight: 700;
-  margin:24px 0 14px 0;
+  margin: 24px 0 14px 0;
 }
-
+.card-featured__image:hover {
+}
+.card-featured__today {
+  background: #74b91c;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 16px;
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 136%;
+  width: 96px;
+  height: 17px;
+  border-radius: 99px;
+  color: white;
+  text-transform: uppercase;
+  margin-top:16px;
+  margin-left:16px;
+  position:absolute;
+}

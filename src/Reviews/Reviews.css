@@ -1,14 +1,22 @@
-.reviews{
-    max-width: 1320px;
-    width:100%;
-    padding:120px; 
-    text-align:left; 
-    margin:auto;
+.reviews {
+  max-width: 1320px;
+  width: 100%;
+  padding: 120px;
+  text-align: left;
+  margin: auto;
 }
-.reviews-heading{
-    margin-bottom: 56px;
+.reviews-heading {
+  margin-bottom: 56px;
+  display: flex;
+  justify-content: space-between;
 }
-.reviews-list{
-    display:flex;
-    justify-content: space-between;
+
+.reviews__button {
+  cursor: pointer;
+  width: 56px;
+  height: 56px;
+  background: #f7f8fa;
+  border: none;
+  margin: 0px 8px;
+  border-radius: 99px;
 }

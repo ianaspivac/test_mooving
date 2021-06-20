@@ -16,6 +16,7 @@ function FeaturedProperties() {
       nrBath: 2,
       size: "8,380",
       location: "50 E 72nd St, New York, NY 10021",
+      today:true
     },
     {
       key: Math.floor(Math.random() * 100 + 1),
@@ -25,6 +26,7 @@ function FeaturedProperties() {
       nrBath: 2,
       size: "8,380",
       location: "50 E 72nd St, New York, NY 10021",
+      today:true
     },
     {
       key: Math.floor(Math.random() * 100 + 1),
@@ -34,10 +36,12 @@ function FeaturedProperties() {
       nrBath: 2,
       size: "8,380",
       location: "50 E 72nd St, New York, NY 10021",
-    },
+      today:false
+    }
   ];
   return (
     <article className="featured-properties">
+        <div className="featured-properties__container">
       <div className="featured-properties__heading">
         <Heading title="Featured Properties" />
         <Button text="More Properties" />
@@ -52,9 +56,11 @@ function FeaturedProperties() {
             size={house.size}
             location={house.location}
             key={house.key}
+            today={house.today}
           />
         ))}
       </ul>
+      </div>
     </article>
   );
 }

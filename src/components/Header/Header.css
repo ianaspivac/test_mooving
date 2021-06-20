@@ -17,9 +17,6 @@
   text-transform: uppercase;
   font-weight: 600;
 }
-.header__links {
-  margin: 0 215px 0 100px;
-}
 .header__links ul {
   list-style: none;
   display: flex;

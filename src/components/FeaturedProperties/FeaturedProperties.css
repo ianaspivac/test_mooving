@@ -1,10 +1,11 @@
 .featured-properties{
+    background-color: #F7F8FA;
+}
+.featured-properties__container{
     max-width: 1320px;
     width:100%;
     margin:auto;
     padding:120px 120px 164px 120px;
-    background-color: #F7F8FA;
-    ;
 }
 .featured-properties__heading{
     display:flex;
