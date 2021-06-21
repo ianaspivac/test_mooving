@@ -68,7 +68,7 @@
   display: none;
 }
 @media screen and (max-width: 1400px) {
-  .hero-section__container{
+  .hero-section__content{
     margin-left:20px;
   }
 }

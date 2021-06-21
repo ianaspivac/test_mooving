@@ -19,6 +19,8 @@
 .header__links ul {
   list-style: none;
   display: flex;
+  align-items: center;
+
 }
 .header__links ul li {
   line-height: 24px;
@@ -48,7 +50,10 @@
   background-color: #4466ee;
   color: white;
 }
-.header__open-menu .header__close-menu {
+.header__open-menu, .header__close-menu {
+  display: none ;
+}
+nav .header__authorization{
   display: none;
 }
 .hidden{
@@ -58,6 +63,9 @@
   .header__actions,
   .header__logo {
     padding: 0 20px;
+  }
+  .header__authorization{
+    margin-left:-80px;
   }
 }
 @media screen and (max-width: 1000px) {
@@ -75,7 +83,7 @@
     display: none;
   }
   .header__open-menu, .header__close-menu {
-    display: block;
+    display: block ;
     top: 30px;
     position: absolute;
     left: 0;
