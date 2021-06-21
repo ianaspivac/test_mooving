@@ -15,7 +15,9 @@ function App() {
         <HeroSection />
         <ActionsProperty />
         <Marquee className="marque" speed={40} gradient={false}>
-          BE PART OF THE REVOLUTION ON MOOVINGBE PART OF THE REVOLUTION ON MOOVING BE PART OF THE REVOLUTION ON MOOVING
+          BE PART OF THE REVOLUTION ON MOOVING BE PART OF THE REVOLUTION ON
+          MOOVINGBE PART OF THE REVOLUTION ON MOOVING BE PART OF THE REVOLUTION
+          ON MOOVING
         </Marquee>
         <FeaturedProperties />
         <Reviews />
