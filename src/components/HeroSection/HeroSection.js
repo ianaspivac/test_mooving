@@ -1,10 +1,12 @@
 import "./HeroSection.css";
 import searchIcon from "./search.svg";
 import { useState, useEffect } from "react";
+import SearchResults from "./SearchResults/SearchResults";
 function HeroSection() {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
-  const [searchResults, setSearchResults] = useState([]);
+  const [searchResultPlace, setSearchResultsPlace] = useState([]);
+  const [searchResultAddress, setSearchResultAddress] = useState([]);
   const getData = () => {
     fetch("data.json", {
       headers: {
@@ -17,23 +19,21 @@ function HeroSection() {
       })
       .then(function (fetchData) {
         setData(fetchData);
-        const results = fetchData.filter(house =>
-          house.address.toLowerCase().includes(searchTerm.toLowerCase()) ||
-          house.place.toLowerCase().includes(searchTerm.toLowerCase())
+        const results = fetchData.filter((house) =>
+          house.place.toLowerCase().includes(searchTerm.toLowerCase()) && searchTerm != ""
         );
-        console.log(results);
+        setSearchResultsPlace(results);
+        const results2 = fetchData.filter((house) =>
+          house.address.toLowerCase().includes(searchTerm.toLowerCase()) && searchTerm != ""
+        );
+        setSearchResultAddress(results2);
       });
   };
 
   const handlerSearch = (event) => {
     setSearchTerm(event.target.value);
   };
-  /*useEffect(() => {
-    const results = data.filter(house =>
-      house.location.toLowerCase().includes(searchTerm.toLowerCase())
-    );
-    setSearchResults(results);
-  }, [searchTerm]);*/
+
   const showResult = (event) => {
     getData();
   };
@@ -57,12 +57,8 @@ function HeroSection() {
               <img src={searchIcon} />
               Search
             </button>
-            <ul>
-              {searchResults.map((item) => (
-                <li>{item}</li>
-              ))}
-            </ul>
           </div>
+          {searchResultPlace.length > 0 || searchResultAddress.length > 0 ? <SearchResults searchResultPlace={searchResultPlace} searchResultAddress={searchResultAddress} /> : null}
         </div>
       </div>
     </div>

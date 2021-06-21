@@ -4,7 +4,6 @@ import Heading from "../Heading/Heading";
 
 function SellingBuying(props) {
   return (
-    <article>
       <div className="actions-property__description">
         <div className="actions-property__details">
         <Heading title={props.header}/>
@@ -12,7 +11,6 @@ function SellingBuying(props) {
         <div><Button text="Call to action"></Button></div>
         </div>
       </div>
-    </article>
   );
 }
 

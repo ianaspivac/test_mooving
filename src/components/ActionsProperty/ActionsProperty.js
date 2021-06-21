@@ -9,7 +9,7 @@ function ActionsProperty() {
   const dataSelling = {
     header: "Selling a Property",
     text:
-      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint. Velit officia aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ",
+      "Amet minim mollit non deserunt ullamco est sit aliqua dolor do amet sint.Velit officia consequat duis enim velit mollit. Velit officia aliqua dolor do amet sint. Velit officia consequat duis enim velit mollit. ",
     buttonText: "Call to action",
   };
   const dataBuying= {
@@ -30,7 +30,7 @@ function ActionsProperty() {
   };
   return (
     <div className="actions-property">
-      <div>
+      
       <div className="actions-property__selection">
           <div className={`actions-property__sell ${isSell ? 'active-text' : null}`}>
               <img className={isSell ? 'active-image' : 'actions-property__selection__img'} src={sell}/>
@@ -41,8 +41,9 @@ function ActionsProperty() {
           <Link to="/" onClick={buyAction}>Buying a property</Link>
           </div>
       </div>
+   <div className="actions-property__content">
       <SellingBuying header={ actionType.header} text={actionType.text} buttonText={actionType.buttonText} />
-      </div>
+     
       <div className="actions-property__video">
       <iframe
       width="100%"
@@ -53,6 +54,7 @@ function ActionsProperty() {
       allowFullScreen
       title="Embedded youtube"
     />
+      </div>
       </div>
     </div>
   );

@@ -1,10 +1,10 @@
 .actions-property{
     max-width: 1320px;
     width:100%;
-    padding:0 120px;
     margin:120px auto;
     display: flex;
     justify-content: space-between;
+   flex-direction: column;
 }
 .actions-property__selection {
   display: flex;
@@ -38,7 +38,73 @@
 }
 .actions-property__video{
   width:592px;
-  height: 370px;
+  height: 331px;
   border-radius: 10px; 
   overflow: hidden;
+}
+.actions-property__content{
+  display: flex;
+  justify-content: space-between;
+}
+@media screen and (max-width: 1500px) {
+  .actions-property{
+    margin-left:30px;
+  }
+  .actions-property__video{
+    margin-right:70px;
+   }
+}
+@media screen and (max-width: 1200px) {
+  .actions-property__video{
+    width:456px;
+    height: 256px;
+   }
+}
+@media screen and (max-width: 950px) {
+  .actions-property__content{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+    margin-left:auto;
+    margin-right: auto;
+  }
+  .actions-property__video{
+    width:85vw;
+    height: 55vw;
+    margin-bottom:40px;
+   }
+   .actions-property__selection{
+     align-items: center;
+     margin-left:7vw;
+   }
+}
+@media screen and (max-width: 650px) {
+  .actions-property__selection__img, .active-image{
+     width: 11vw;
+     margin-bottom:16px;
+   }
+   .actions-property__buy, .actions-property__sell{
+     flex-direction: column;
+     align-items: center;    
+   }
+   .actions-property__selection{    
+    align-items: center;
+    margin-left:0;
+    margin-right:auto;
+  }
+}
+@media screen and (max-width: 475px) {
+   .actions-property__selection{    
+    font-size:12px;   
+  }
+  .actions-property__buy{
+    margin-left:5px;    
+  }
+  .actions-property__buy,.actions-property__sell{
+    margin-bottom:22px;
+  }
+  .actions-property{
+    margin-top:24px;
+  }
+
 }

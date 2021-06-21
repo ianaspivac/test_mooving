@@ -1,12 +1,13 @@
 import "./FeaturedProperties.css";
 import CardFeatured from "./CardFeatured";
-import { BrowserRouter as Router, Link } from "react-router-dom";
 import Button from "../Button/Button";
 import Heading from "../Heading/Heading";
 import house1 from "./houses/house1.jpg";
 import house2 from "./houses/house2.jpg";
 import house3 from "./houses/house3.jpg";
+import {useState} from "react";
 function FeaturedProperties() {
+  const [isHoveredList,setIsHoveredList]=useState();
   const featured = [
     {
       key: Math.floor(Math.random() * 100 + 1),
@@ -39,6 +40,9 @@ function FeaturedProperties() {
       today:false
     }
   ];
+const setHoveredHandler = (data)=>{
+  setIsHoveredList(!data);
+};
   return (
     <article className="featured-properties">
         <div className="featured-properties__container">
@@ -46,7 +50,7 @@ function FeaturedProperties() {
         <Heading title="Featured Properties" />
         <Button text="More Properties" />
       </div>
-      <ul className="featured-list">
+      <ul className={`featured-list ${isHoveredList ? 'hovered-list' : null}`}>
         {featured.map((house) => (
           <CardFeatured
             image={house.image}
@@ -57,6 +61,7 @@ function FeaturedProperties() {
             location={house.location}
             key={house.key}
             today={house.today}
+            setHovered={setHoveredHandler}
           />
         ))}
       </ul>

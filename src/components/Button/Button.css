@@ -15,3 +15,9 @@
   background-color: transparent;
   color: rgba(39, 38, 61, 0.5);
 }
+@media screen and (max-width: 1200px) {
+  .button a{
+   font-size:80%; 
+   height: 50px;  
+  }
+}

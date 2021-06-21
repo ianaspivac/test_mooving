@@ -28,3 +28,58 @@
   margin-left:16px;
   position:absolute;
 }
+.hovered .card-featured__image img{
+width: 592px;
+height: 441px;
+position:  relative;
+
+}
+
+.hovered .card-featured__image {
+  width: 592px;
+  height: 441px;
+  margin-left:-110px;
+  margin-top:-490px;
+  position:  absolute;
+  }
+  .hovered .card-featured__info{
+    margin-top:-50px;  
+    position: relative;
+    margin-left:-110px;
+  }
+.hovered .card-featured__price{
+  font-size:32px;
+  font-weight:700;  
+}
+.fake-image{
+ margin-top:110px; 
+ filter:opacity(50%);
+}
+.hovered .card-featured__today{
+  position: absolute;
+  margin-left:-90px;
+  margin-top:-70px;
+  z-index: 1;
+}
+@media screen and (max-width: 1300px) {
+  .card-featured__image img{
+    width: 43vw;
+    height: 33vw;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .card-featured__image img{
+    width: 85vw;
+    height: 63vw;
+  }
+  .card-featured{
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 650px) {
+ 
+}
+@media screen and (max-width: 475px) {
+   
+
+}

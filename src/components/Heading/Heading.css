@@ -2,4 +2,21 @@
     margin: 0;
     font-size: 40px;
     font-weight: 800;
+    text-align: left;
 }
+@media screen and (max-width: 1200px) {
+    .heading{
+        font-size:2em; 
+    }
+  }
+  @media screen and (max-width: 650px) {
+    .heading{
+        font-size:1.6em; 
+        max-width: 260px;
+    }
+  }
+  @media screen and (max-width: 500px) {
+    .heading{
+        max-width: 200px;
+    }
+  }

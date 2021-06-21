@@ -2,7 +2,6 @@
   max-width: 1320px;
   width: 100%;
   margin: auto;
-  padding: 0 120px;
   height: 88px;
   flex-wrap: wrap;
 }
@@ -48,4 +47,15 @@
   margin-left: 8px;
   background-color: #4466ee;
   color: white;
+}
+@media screen and (max-width: 1300px) {
+ .header__actions,.header__logo{
+  padding:0 20px;
+ }
+}
+@media screen and (max-width: 1000px) {
+
+}
+@media screen and (max-width: 475px) {
+
 }

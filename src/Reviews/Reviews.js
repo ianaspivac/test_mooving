@@ -10,7 +10,17 @@ import "slick-carousel/slick/slick-theme.css";
 
 function Reviews() {
   const slider = React.useRef(null);
-
+  var settings = {
+    responsive :[
+      {
+        breakpoint: 800,
+        settings: {
+          slidesToShow: 1,
+          slidesToScroll: 1
+        }
+      }
+    ]
+  };
   const reviews = [
     {
       key: Math.floor(Math.random() * 100 + 1),
@@ -60,7 +70,7 @@ function Reviews() {
         </div>
       </div>
       <div className="reviews-list">
-        <Slider
+        <Slider {...settings}
           ref={slider}
           dots={false}
           arrows={false}
