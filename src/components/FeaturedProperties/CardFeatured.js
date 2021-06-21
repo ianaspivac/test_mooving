@@ -6,13 +6,15 @@ import {useState} from "react";
 
 function CardFeatured(props) {
   const [isHovered,setIsHovered]=useState(false);
+  
+  
   const hoverImage = (event) => {   
     setIsHovered(!isHovered);
     props.setHovered(isHovered);    
   };
   return (
-    <div className={`card-featured ${isHovered ? 'hovered' : null}`} >
-      <Link to="/" onClick={hoverImage}>
+    <div className={`card-featured ${isHovered ? 'hovered' : null}`}  >
+      <Link to="/">
         {props.today ? (
           <span className="card-featured__today">Posted today</span>
         ) : (
@@ -20,7 +22,7 @@ function CardFeatured(props) {
         )}
         {isHovered ? <div className="fake-image"><img src={props.image} /></div> :null}
         <div className="card-featured__image">
-          <img src={props.image} />
+          <img onMouseOver={hoverImage} onMouseLeave={hoverImage} src={props.image} />
         </div>
         <div className="card-featured__info">
           <p className="card-featured__price">£{props.price}</p>

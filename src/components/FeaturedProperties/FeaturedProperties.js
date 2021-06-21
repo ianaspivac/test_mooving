@@ -5,7 +5,7 @@ import Heading from "../Heading/Heading";
 import house1 from "./houses/house1.jpg";
 import house2 from "./houses/house2.jpg";
 import house3 from "./houses/house3.jpg";
-import {useState} from "react";
+import {useState, useEffect} from "react";
 function FeaturedProperties() {
   const [isHoveredList,setIsHoveredList]=useState();
   const featured = [
@@ -40,9 +40,11 @@ function FeaturedProperties() {
       today:false
     }
   ];
+
 const setHoveredHandler = (data)=>{
   setIsHoveredList(!data);
 };
+useEffect(()=>{setIsHoveredList(isHoveredList)},[isHoveredList]);
   return (
     <article className="featured-properties">
         <div className="featured-properties__container">

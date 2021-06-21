@@ -114,6 +114,7 @@ nav .header__authorization{
   }
   nav .header__authorization{
     display: block;
+    margin-left:0;
   }
   .header__actions .header__sell {
     padding: 15px;
