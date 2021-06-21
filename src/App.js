@@ -7,13 +7,12 @@ import Reviews from './Reviews/Reviews';
 import Footer from './components/Footer/Footer';
 import { ToastProvider} from 'react-toast-notifications';
 import HeroSection from './components/HeroSection/HeroSection';
-
 function App() {
   return (
     <div className="App">  
     <ToastProvider  placement="bottom-right" autoDismiss="true"> 
-     <Header/>
-     <HeroSection/>
+     <Header />
+     <HeroSection />
      <ActionsProperty/>
      <FeaturedProperties/>
      <Reviews/>

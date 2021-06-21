@@ -27,7 +27,7 @@
   text-align: center;
 }
 .header__actions {
-  display: flex; 
+  display: flex;
 }
 .header__actions a {
   font-family: Inter;
@@ -48,14 +48,69 @@
   background-color: #4466ee;
   color: white;
 }
+.header__open-menu .header__close-menu {
+  display: none;
+}
+.hidden{
+  display: none !important;
+}
 @media screen and (max-width: 1300px) {
- .header__actions,.header__logo{
-  padding:0 20px;
- }
+  .header__actions,
+  .header__logo {
+    padding: 0 20px;
+  }
 }
 @media screen and (max-width: 1000px) {
 
+  a.header__authorization{
+    display:none;
+  }
+  .header {
+    overflow: hidden;
+    position: absolute;
+    z-index: 10;
+    width:100vw;
+  }
+  .header__links {
+    display: none;
+  }
+  .header__open-menu, .header__close-menu {
+    display: block;
+    top: 30px;
+    position: absolute;
+    left: 0;
+    right: 0;
+  }
+  .menu-visible {
+    display: flex;
+  }
+  .menu-visible ul {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    margin-top: 40px;
+    right: 0;
+    left: 0;
+  }
+  .menu-visible ul li {
+    margin-top: 24px;
+  }
+  .header-menu {
+    height: 388px;
+    margin-top: 20px;
+    align-content: flex-start;
+  }
+  .header-menu .header__actions {
+    justify-content: center;
+    align-items: center;
+  }
+  nav .header__authorization{
+    display: block;
+  }
+  .header__actions .header__sell {
+    padding: 15px;
+    font-size: 15px;
+  }
 }
 @media screen and (max-width: 475px) {
-
 }

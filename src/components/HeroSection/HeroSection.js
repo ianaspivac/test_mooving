@@ -1,12 +1,14 @@
 import "./HeroSection.css";
 import searchIcon from "./search.svg";
+import searchIconRed from "./search-red.svg";
 import { useState, useEffect } from "react";
 import SearchResults from "./SearchResults/SearchResults";
-function HeroSection() {
+function HeroSection(props) {
   const [data, setData] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
   const [searchResultPlace, setSearchResultsPlace] = useState([]);
   const [searchResultAddress, setSearchResultAddress] = useState([]);
+
   const getData = () => {
     fetch("data.json", {
       headers: {
@@ -19,12 +21,16 @@ function HeroSection() {
       })
       .then(function (fetchData) {
         setData(fetchData);
-        const results = fetchData.filter((house) =>
-          house.place.toLowerCase().includes(searchTerm.toLowerCase()) && searchTerm != ""
+        const results = fetchData.filter(
+          (house) =>
+            house.place.toLowerCase().includes(searchTerm.toLowerCase()) &&
+            searchTerm != ""
         );
         setSearchResultsPlace(results);
-        const results2 = fetchData.filter((house) =>
-          house.address.toLowerCase().includes(searchTerm.toLowerCase()) && searchTerm != ""
+        const results2 = fetchData.filter(
+          (house) =>
+            house.address.toLowerCase().includes(searchTerm.toLowerCase()) &&
+            searchTerm != ""
         );
         setSearchResultAddress(results2);
       });
@@ -37,6 +43,7 @@ function HeroSection() {
   const showResult = (event) => {
     getData();
   };
+
   return (
     <div className="hero-section">
       <div className="hero-section__container">
@@ -57,8 +64,19 @@ function HeroSection() {
               <img src={searchIcon} />
               Search
             </button>
+            <button
+              className="hero-section__search-button-responsive"
+              onClick={showResult}
+            >
+              <img src={searchIconRed} />
+            </button>
           </div>
-          {searchResultPlace.length > 0 || searchResultAddress.length > 0 ? <SearchResults searchResultPlace={searchResultPlace} searchResultAddress={searchResultAddress} /> : null}
+          {searchResultPlace.length > 0 || searchResultAddress.length > 0 ? (
+            <SearchResults
+              searchResultPlace={searchResultPlace}
+              searchResultAddress={searchResultAddress}
+            />
+          ) : null}
         </div>
       </div>
     </div>
