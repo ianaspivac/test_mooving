@@ -26,82 +26,80 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer__container">
-        <div className="footer__social">
-          <div className="header__logo">
+        <div className="footer__logo">
+          <Link to="/">
+            <img src={logo} alt="logo" />
+          </Link>
+        </div>
+        <ul className="footer__social-list">
+          <li>
             <Link to="/">
-              <img src={logo} alt="logo" />
+              <img src={ig} />
             </Link>
-          </div>
-          <ul className="footer__social-list">
+          </li>
+          <li>
+            <Link to="/">
+              <img src={tw} />
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <img src={fb} />
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <img src={yt} />
+            </Link>
+          </li>
+          <li>
+            <Link to="/">
+              <img src={li} />
+            </Link>
+          </li>
+        </ul>
+
+        <nav className="footer__navigation">
+          <ul className="footer__links">
             <li>
-              <Link to="/">
-                <img src={ig} />
-              </Link>
+              <Link to="/">Privacy Policy</Link>
             </li>
             <li>
-              <Link to="/">
-                <img src={tw} />
-              </Link>
+              <Link to="/">Terms & Conditions</Link>
             </li>
             <li>
-              <Link to="/">
-                <img src={fb} />
-              </Link>
+              <Link to="/">Press</Link>
             </li>
             <li>
-              <Link to="/">
-                <img src={yt} />
-              </Link>
-            </li>
-            <li>
-              <Link to="/">
-                <img src={li} />
-              </Link>
+              <Link to="/">Contact us</Link>
             </li>
           </ul>
-        </div>
-        <div className="footer__bottom">
-          <nav className="footer__navigation">
-            <ul className="footer__links">
-              <li>
-                <Link to="/">Privacy Policy</Link>
-              </li>
-              <li>
-                <Link to="/">Terms & Conditions</Link>
-              </li>
-              <li>
-                <Link to="/">Press</Link>
-              </li>
-              <li>
-                <Link to="/">Contact us</Link>
-              </li>
-            </ul>
-            <p className="footer__copyright">
-              ©2021 Mooving.uk. All rights reserved.
-            </p>
-          </nav>
+          <p className="footer__copyright">
+            ©2021 Mooving.uk. All rights reserved.
+          </p>
+        </nav>
 
-          <div className="footer__connection">
-            <div className="footer__subscription">
-              <h3>Get the latest news</h3>
-              <form onSubmit={subscription}>
-                <input
-                  className="footer__subscription__email"
-                  type="email"
-                  placeholder="Your email"
-                  onChange={handlerEmail}
-                  value={email}
-                  required
-                />
-                <input
-                  className="footer__subscription__subscribe"
-                  type="submit"
-                  value="Subscribe"
-                />
-              </form>
-            </div>
+        <div className="footer__connection">
+          <div className="footer__subscription">
+            <h3>Get the latest news</h3>
+            <form onSubmit={subscription}>
+              <input
+                className="footer__subscription__email"
+                type="email"
+                placeholder="Your email"
+                onChange={handlerEmail}
+                value={email}
+                required
+              />
+              <input
+                className="footer__subscription__subscribe"
+                type="submit"
+                value="Subscribe"
+              />
+            </form>
           </div>
         </div>
+
         <img className="footer__girl-icon" src={iconGirl} alt="Girl icon" />
       </div>
     </div>
